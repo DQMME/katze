@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("com.google.devtools.ksp") version "1.6.21-1.0.5" // used for plugin-processor
+    id("com.google.devtools.ksp") version "1.6.21-1.0.5"
     kotlin("jvm") version "1.6.21"
-    id("dev.schlaubi.mikbot.gradle-plugin") version "2.2.0"
+    id("dev.schlaubi.mikbot.gradle-plugin") version "2.3.2"
 }
 
 group = "de.dqmme"
@@ -16,15 +16,14 @@ repositories {
 
 dependencies {
     // this one is included in the bot itself, therefore we make it compileOnly
-    // Or use: 'kotlin.stdlib.default.dependency=false' in gradle.properties
     compileOnly(kotlin("stdlib-jdk8"))
-    mikbot("dev.schlaubi", "mikbot-api", "3.0.0-SNAPSHOT")
+    mikbot("dev.schlaubi", "mikbot-api", "3.2.0-SNAPSHOT")
     ksp("dev.schlaubi", "mikbot-plugin-processor", "2.2.0")
 }
 
 mikbotPlugin {
-    description.set("This is a cool plugin!")
-    provider.set("Schlaubi")
+    description.set("This is a cool plugin with cats!")
+    provider.set("DQMME")
     license.set("MIT")
 }
 
