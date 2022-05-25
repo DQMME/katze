@@ -25,7 +25,7 @@ jobs:
       - name: Push Image
         run: |
           docker buildx build \
-                  --tag  ghcr.io/dqmme/katze//bot:"$GITHUB_SHA" \
+                  --tag  ghcr.io/dqmme/katze/bot:"$GITHUB_SHA" \
                   --tag  ghcr.io/dqmme/katze/bot:latest \
                   --file ./Dockerfile \
                   --output type=image,push=true .
