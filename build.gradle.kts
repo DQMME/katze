@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("com.google.devtools.ksp") version "1.6.21-1.0.5"
     kotlin("jvm") version "1.6.21"
-    id("dev.schlaubi.mikbot.gradle-plugin") version "2.3.2"
+    id("dev.schlaubi.mikbot.gradle-plugin") version "2.3.3"
 }
 
 group = "de.dqmme"
